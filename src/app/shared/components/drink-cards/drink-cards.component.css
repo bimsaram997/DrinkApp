@@ -1,0 +1,120 @@
+@media screen and (max-width: 2560px) and (min-width: 1141px) {
+  .example-card {
+    width: 1320px;
+    height: 260px;
+    margin-left: 40px;
+  }
+  .img {
+    width: 310px;
+    height: 260px;
+    border-radius: 5px 0px 0px 5px;
+  }
+  .text {
+    margin: 10px 10px 10px 20px;
+    font-size: var(--title-font-size);
+    color: var(--primary-color);
+  }
+  .view-button {
+    margin: 10px 0px 0px 15px;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+  .example-card {
+    width: 1015px;
+    height: 225px;
+    margin-left: 10px;
+  }
+  .img {
+    width: 260px;
+    height: 225px;
+    border-radius: 5px 0px 0px 5px;
+  }
+  .text {
+    margin: 10px 10px 10px 20px;
+    font-size: var(--title-font-size-lap);
+    color: var(--primary-color);
+  }
+
+  .view-button {
+    margin: 10px 0px 0px 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .example-card {
+    width: 725px;
+    height: 170px;
+    margin-left: 10px;
+  }
+  .img {
+    width: 185px;
+    height: 170px;
+    border-radius: 5px 0px 0px 5px;
+  }
+  .text {
+    margin: 10px 10px 10px 20px;
+    font-size: var(--title-font-size-lap-s);
+    color: var(--primary-color);
+  }
+
+  .view-button {
+    margin: 10px 0px 0px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .example-card {
+    width: 540px;
+    height: 135px;
+    margin-left: 10px;
+  }
+  .img {
+    width: 140px;
+    height: 135px;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  .text {
+    margin: 10px 10px 10px 4px;
+    font-size: var(--title-font-size-lap-t);
+    color: var(--primary-color);
+  }
+
+  .view-button {
+    margin: 10px 0px 0px 0px;
+  }
+  .mat-mdc-button.mat-mdc-button-base,
+  .mat-mdc-raised-button.mat-mdc-button-base,
+  .mat-mdc-unelevated-button.mat-mdc-button-base,
+  .mat-mdc-outlined-button.mat-mdc-button-base {
+    height: 30px;
+    width: 90px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 425px) and (min-width: 326px) {
+  .example-card {
+    width: 385px;
+    height: 155px;
+    margin-left: 10px;
+  }
+  .img {
+    width: 165px;
+    height: 155px;
+    border-radius: 5px 0px 0px 5px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .example-card {
+    width: 300px;
+    height: 135px;
+  }
+  .img {
+    width: 120px;
+    height: 135px;
+    border-radius: 5px 0px 0px 5px;
+  }
+}

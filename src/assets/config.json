@@ -1,0 +1,34 @@
+{
+  "header": "ThirstQuenche",
+  "ingredients": [
+    "Gin",
+    "Vodka",
+    "Arrack",
+    "Brandy",
+    "Wine"
+  ],
+  "categories": [
+    "Ordinary",
+    "Cocktail"
+  ],
+  "glasses": [
+    "Champagne flute",
+    "Cocktail glass"
+  ],
+  "ingredientImages": [
+    "assets/ingredients/drink-water.svg",
+    "assets/ingredients/energy-drink-_1_.svg",
+    "assets/ingredients/martini.svg",
+    "assets/ingredients/wine.svg"
+  ],
+  "languages": [
+    {"name": "Choose..", "key": 0},
+    {"name": "English", "key": 1},
+    {"name": "German", "key": 2},
+    {"name": "Italy", "key": 3},
+    {"name": "Spanish", "key": 4},
+    {"name": "French", "key": 5},
+    {"name": "Chinese(Traditional)", "key": 6},
+    {"name": "Chinese(Simplified", "key": 7}
+  ]
+}

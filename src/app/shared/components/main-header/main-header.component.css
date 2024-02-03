@@ -1,0 +1,15 @@
+.custom-toolbar {
+  padding: 10px;
+}
+
+.logo {
+  border-radius: 50%;
+}
+
+.app-name {
+  font-weight: bold;
+}
+
+.search-input {
+  border-radius: 5px;
+}

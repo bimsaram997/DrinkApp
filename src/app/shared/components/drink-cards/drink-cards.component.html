@@ -1,0 +1,38 @@
+<mat-card class="example-card mt-3">
+  <div class="horizontal-card-content">
+    <div class="row">
+      <div class="col-3">
+        <img
+          mat-card-image
+          [src]="drinkItem.strDrinkThumb"
+          alt="Photo of a Shiba Inu"
+          class="img"
+        />
+      </div>
+      <div class="col-9">
+        <mat-card-content>
+          <div class="row">
+            <div class="col-12">
+              <p class="text">
+                {{ drinkItem.strDrink }}
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <mat-card-actions>
+                <button
+                  mat-button
+                  class="view-button"
+                  (click)="naviagatetoItem(drinkItem.idDrink)"
+                >
+                  View more
+                </button>
+              </mat-card-actions>
+            </div>
+          </div>
+        </mat-card-content>
+      </div>
+    </div>
+  </div>
+</mat-card>

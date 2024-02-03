@@ -12,4 +12,8 @@ export class DrinkServiceService {
   getAlcoholicDrinks(): Observable<any> {
     return this.http.get(`${this.myUrl}/json/v1/1/filter.php?a=Alcoholic`);
   }
+  getAlcoholicDrinkById(drinkId: number): Observable<any> {
+    return this.http.get(`${this.myUrl}/json/v1/1/lookup.php?i=${drinkId}`);
+  }
+
 }
