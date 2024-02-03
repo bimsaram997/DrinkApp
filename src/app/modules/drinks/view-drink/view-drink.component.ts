@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
-import { Ingredient } from 'src/app/models/drinks/ingredient';
-import { DrinkServiceService } from 'src/app/services/drinks/drink-service.service';
-import { ConfigService } from 'src/app/services/shared/config-service';
+import { Ingredient } from '../../../models/drinks/ingredient';
+import { Language } from '../../../models/shared/language';
+import { DrinkServiceService } from '../../../services/drinks/drink-service.service';
+import { ConfigService } from '../../../services/shared/config-service';
 
 @Component({
   selector: 'app-view-drink',
@@ -18,15 +19,17 @@ export class ViewDrinkComponent implements OnInit {
   drinkItems: any[] = [];
   ingredients: Ingredient[] = [];
   indgredientImages: string[] = [];
-  languages: any[] = [];
+  languages: Language[] = [];
   insutructionList: any[] = [];
   instructions: string[] = [];
+
   constructor(
     private route: ActivatedRoute,
     private drinkServiceService: DrinkServiceService,
     private configService: ConfigService,
     private toastr: ToastrService,
   ) {}
+
   ngOnInit() {
     this.loadConfigData();
     this.route.params.subscribe((params) => {
@@ -37,6 +40,7 @@ export class ViewDrinkComponent implements OnInit {
       }
     });
   }
+
   loadConfigData(): void {
     this.subscription.push(
       this.configService.getConfig().subscribe((config: any) => {
@@ -89,8 +93,6 @@ export class ViewDrinkComponent implements OnInit {
     });
   }
 
-
-
   onSelectLangauge(key: any): void {
     this.instructions = [];
     const selectedInstruction = this.insutructionList.find(item => item.key === (+key));
@@ -99,8 +101,6 @@ export class ViewDrinkComponent implements OnInit {
     } else {
       this.toastr.warning('No instruction found!');
     }
-
-
   }
 
 }

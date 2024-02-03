@@ -1,31 +1,30 @@
-import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { DrinkServiceService } from '../../../services/drinks/drink-service.service';
 import { Observable, Subscription } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import { ConfigService } from 'src/app/services/shared/config-service';
+import { ConfigService } from '../../../services/shared/config-service';
+import { DrinkList } from '../../../models/drinks/drinkList';
 
 @Component({
   selector: 'app-drinks-list',
   templateUrl: './drinks-list.component.html',
   styleUrls: ['./drinks-list.component.css'],
 })
-export class DrinksListComponent implements OnInit {
+export class DrinksListComponent implements OnInit, OnDestroy {
   subscription: Subscription[] = [];
-  drinkItems: any[] = [];
-  dataSource: MatTableDataSource<any>;
-  displayedColumns: string[] = ['your_columns']; // Replace with actual column names
+  drinkItems: DrinkList[] = [];
+  dataSource: MatTableDataSource<DrinkList>;
   obs: Observable<any>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   indgredients: string[] = [];
   categories: string[] = [];
   is: boolean = false;
-  glasses: any;
+  glasses: string[] = [];
   constructor(
     private router: Router,
     private drinkServiceService: DrinkServiceService,
-    private changeDetectorRef: ChangeDetectorRef,
     private configService: ConfigService
   ) {}
 
@@ -60,5 +59,11 @@ export class DrinksListComponent implements OnInit {
 
   navigateToEditFoodItem() {
     this.router.navigate(['view']);
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.forEach((subscription: Subscription) => {
+      subscription.unsubscribe();
+    });
   }
 }
