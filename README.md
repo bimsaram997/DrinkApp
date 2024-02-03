@@ -1,27 +1,30 @@
 # DrinkApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.9.
+## Project Setup
+Clone the project from https://github.com/bimsaram997/DrinkApp.git
 
-## Development server
+Install NPM packages using the command: `npm i`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run the project using the command: `ng serve`
 
-## Code scaffolding
+Open the project on `http://localhost:4200/`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Completed Features
 
-## Build
+Lists drinks with images and drink names.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Allows users to view more information about a drink by clicking the "View More" button.
 
-## Running unit tests
+## Proposed Features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Add functionalities for filters in the list view.
+Implement a Skeleton loader for UI elements.
 
-## Running end-to-end tests
+Integrate an image viewer.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Config.json Tasks
+Allows the addition of a custom shop name.
 
-## Further help
+Enables the addition of languages, ingredients, image paths, and various values related to filters.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
