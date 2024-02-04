@@ -1,43 +1,52 @@
 <div class="conatiner-fluid">
   <div class="row">
     <div class="col-md-5">
-      <img mat-card-image [src]="drinkItem?.strDrinkThumb" alt="Photo of a Shiba Inu" class="image">
+      <img
+        mat-card-image
+        [src]="drinkItem?.strDrinkThumb"
+        alt="Photo of a Shiba Inu"
+        class="image"
+      />
     </div>
     <div class="col-md-7 details">
       <div class="row">
         <div class="col-12">
-          <h2 class="text">{{drinkItem?.strDrink}}</h2>
+          <h2 class="text">{{ drinkItem?.strDrink }}</h2>
           <mat-divider></mat-divider>
         </div>
       </div>
       <div class="row mb-3 mt-2">
         <div class="col-12">
-            <span class="label bold-label">Category:</span>
-            <span class="text-description">{{drinkItem?.strCategory}}</span>
+          <span class="label bold-label">Category:</span>
+          <span class="text-description">{{ drinkItem?.strCategory }}</span>
         </div>
-    </div>
+      </div>
 
-    <div class="row mb-3">
+      <div class="row mb-3">
         <div class="col-12">
-            <span class="label  bold-label">Booze type:</span>
-            <span class="text-description">{{drinkItem?.strAlcoholic}}</span>
+          <span class="label bold-label">Booze type:</span>
+          <span class="text-description">{{ drinkItem?.strAlcoholic }}</span>
         </div>
-    </div>
+      </div>
 
-    <div class="row mb-2">
+      <div class="row mb-2">
         <div class="col-12">
-            <span class="label bold-label">Glass:</span>
-            <span class="text-description">{{drinkItem?.strGlass}}</span>
+          <span class="label bold-label">Glass:</span>
+          <span class="text-description">{{ drinkItem?.strGlass }}</span>
         </div>
-    </div>
+      </div>
       <div class="row mb-2">
         <div class="col-12">
           <mat-list>
-            <h2 class="label  bold-label">Ingredients</h2>
+            <h2 class="label bold-label">Ingredients</h2>
             <mat-divider></mat-divider>
-            <mat-list-item *ngFor="let item of ingredients">
+            <mat-list-item *ngFor="let item of ingredients" matRipple>
               <div class="ingredient-container">
-                <img class="menu-image" [src]="item.Image" alt="{{ item.Image }}">
+                <img
+                  class="menu-image"
+                  [src]="item.Image"
+                  alt="{{ item.Image }}"
+                />
                 <div class="ingredient-details">
                   <div matListItemTitle>{{ item.Name }}</div>
                 </div>
@@ -49,14 +58,18 @@
       <div class="row">
         <div class="col-12">
           <div class="instruction-container">
-            <h2 class="label  bold-label" id="instruction">Instructions</h2>
+            <h2 class="label bold-label" id="instruction">Instructions</h2>
             <mat-divider></mat-divider>
-            <div class="language-selector text-description">
-              Select Language:
-              <select id="languageSelect"  #t (change)="onSelectLangauge(t.value)">
-                <option *ngFor="let language of languages" [value]="language.key">{{language.name}}</option>
-              </select>
-            </div>
+            <mat-form-field appearance="outline" class="mt-3">
+              <mat-label class="label">Language</mat-label>
+              <mat-select (selectionChange)="onSelectLangauge($event)">
+                <mat-option
+                  *ngFor="let language of languages"
+                  [value]="language.key">
+                  {{ language.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
         </div>
       </div>
@@ -64,10 +77,9 @@
         <div class="col-12">
           <ul>
             <li *ngFor="let instruction of instructions">
-            <span class="text-description">{{instruction}}</span>
+              <span class="text-description">{{ instruction }}</span>
             </li>
           </ul>
-
         </div>
       </div>
     </div>

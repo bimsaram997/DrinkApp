@@ -1,3 +1,7 @@
+mat-form-field {
+  width: 100%;
+}
+
 @media screen and (max-width: 2560px) and (min-width: 1141px) {
   .heading {
     margin: 10px 0px 0px 35px;

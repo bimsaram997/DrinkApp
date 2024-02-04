@@ -93,14 +93,15 @@ export class ViewDrinkComponent implements OnInit {
     });
   }
 
-  onSelectLangauge(key: any): void {
+  onSelectLangauge(event: any): void {
     this.instructions = [];
-    const selectedInstruction = this.insutructionList.find(item => item.key === (+key));
+    const selectedInstruction = this.insutructionList.find(item => item.key === (+event.value));
     if (selectedInstruction) {
       this.instructions.push(selectedInstruction.instruction);
     } else {
       this.toastr.warning('No instruction found!');
     }
   }
+
 
 }

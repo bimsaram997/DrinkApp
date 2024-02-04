@@ -13,6 +13,7 @@ import { ComponentsModule } from '../../shared/components/components.module';
     MaterialModule,
     DrinksRoutingModule,
     ComponentsModule,
+
   ],
 })
 export class DrinksModule {}

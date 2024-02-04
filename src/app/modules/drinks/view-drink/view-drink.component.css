@@ -1,3 +1,9 @@
+mat-form-field {
+  width: 15%;
+}
+
+
+
 @media screen and (max-width: 2560px) and (min-width: 1141px) {
   .conatiner-fluid {
     margin: 75px 150px 0px 150px;

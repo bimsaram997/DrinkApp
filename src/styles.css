@@ -31,13 +31,15 @@ body {
   font-family: var(--font-family);
   overflow-x: hidden;
 }
-mat-form-field {
-  width: 100%;
+
+.label {
+  color:var(--primary-color);
 }
+
 
 .mat-toolbar.mat-primary {
   background: var(--primary-color);
-  color: #fff;
+  color: var(--secondary-color);
   height: 80px;
 }
 
